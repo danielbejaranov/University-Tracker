@@ -1,4 +1,4 @@
-public class Teacher {
+public abstract class Teacher {
     private int id;
     private String name;
     private double baseSalary;
@@ -32,4 +32,6 @@ public class Teacher {
         this.name = name;
         this.baseSalary = baseSalary;
     }
+
+    public abstract double calculateSalary();
 }

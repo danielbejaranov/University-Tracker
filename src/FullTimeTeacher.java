@@ -13,4 +13,9 @@ public class FullTimeTeacher extends Teacher{
         super(id, name, baseSalary);
         this.experienceYears = experienceYears;
     }
+
+    @Override
+    public double calculateSalary() {
+        return getBaseSalary() * (1.1 * experienceYears);
+    }
 }
