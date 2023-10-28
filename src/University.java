@@ -28,5 +28,27 @@ public class University {
     public void setClasses(ArrayList<Class> classes) {
         this.classes = classes;
     }
-    
+
+    public void addTeacher(Teacher teacher){
+        teachers.add(teacher);
+    }
+
+    public void addStudent(Student student){
+        students.add(student);
+    }
+
+    public void addClass(Class c) {
+        classes.add((c));
+    }
+
+    public void addGroupOfTeacher (ArrayList<Teacher> groupOfTeachers) {
+        teachers.addAll(groupOfTeachers);
+    }
+
+    public void addGroupOfStudents (ArrayList<Student> groupOfStudents) {
+        students.addAll(groupOfStudents);
+    }
+    public void addGroupOfClasses (ArrayList<Class> groupOfClasses) {
+        classes.addAll(groupOfClasses);
+    }
 }
