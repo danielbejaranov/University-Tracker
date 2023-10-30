@@ -63,4 +63,34 @@ public class Class {
         students.addAll(groupOfStudents);
     }
 
+    public String print() {
+        return "Class{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", classroom='" + classroom + '\'' +
+                ", students=" + students +
+                ", teacher=" + teacher +
+                '}';
+    }
+
+    public String printStudents() {
+        StringBuilder classInfo = new StringBuilder("Class{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", classroom='" + classroom + '\'' +
+                ", students=[");
+
+        for (int i = 0; i < students.size(); i++) {
+            Student student = students.get(i);
+            classInfo.append(student.getName()).append(" (ID: ").append(student.getId()).append(")");
+
+            if (i < students.size() - 1) {
+                classInfo.append(", ");
+            }
+        }
+
+        classInfo.append("], teacher=").append(teacher.getName()).append(" (ID: ").append(teacher.getId()).append(")}");
+
+        return classInfo.toString();
+    }
 }

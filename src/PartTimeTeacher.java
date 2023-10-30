@@ -18,4 +18,12 @@ public class PartTimeTeacher extends Teacher{
     public double calculateSalary() {
         return getBaseSalary() * activeHoursPerWeek;
     }
+
+    public String print() {
+        return "PartTimeTeacher{" +
+                "name='" + getName() + '\'' +
+                ", baseSalary=" + getBaseSalary() +
+                ", activeHoursPerWeek=" + activeHoursPerWeek +
+                '}';
+    }
 }

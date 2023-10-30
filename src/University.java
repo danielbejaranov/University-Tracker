@@ -51,4 +51,29 @@ public class University {
     public void addGroupOfClasses (ArrayList<Class> groupOfClasses) {
         classes.addAll(groupOfClasses);
     }
+
+    public void printAllTeachers() {
+        for (Teacher teacher : teachers) {
+            if (teacher instanceof FullTimeTeacher) {
+                FullTimeTeacher fullTimeTeacher = (FullTimeTeacher) teacher;
+                System.out.println(fullTimeTeacher.print());
+            } else if (teacher instanceof PartTimeTeacher) {
+                PartTimeTeacher partTimeTeacher = (PartTimeTeacher) teacher;
+                System.out.println(partTimeTeacher.print());
+            }
+        }
+    }
+
+    public void printAllStudents() {
+        System.out.println("Students:");
+        for (Student student : students) {
+            System.out.println(student.print());
+        }
+    }
+
+    public void printAllClasses() {
+        for (Class aClass : classes) {
+            System.out.println(aClass.print());
+        }
+    }
 }
